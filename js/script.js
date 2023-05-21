@@ -27,6 +27,24 @@ function navLinkClick() {
   }
 }
 
+const removeTabHighlight = () => {
+  Array.from(navLinks).forEach((elem) => {
+    elem.classList.remove('active')
+  })
+}
+
+const addTabHighlight = () => {
+  Array.from(navLinks).forEach((elem) => {
+  if (elem.href === location.href) {
+    elem.classList.add('active');
+    }
+  })
+}
+
+removeTabHighlight();
+addTabHighlight();
+
+
 //Input boxes effect
 const inputBoxes = document.querySelectorAll(".input-1");
 inputBoxes.forEach((elem) => {
@@ -46,7 +64,7 @@ function setFocus(on) {
     inputBoxes.forEach(function (elem) {
       var input = elem;
       var parent = input.closest(".input-box");
-      if (input.value) parent.addClass("focus");
+      if (input.value) parent.classList.add("focus");
       else parent.classList.remove("focus");
     });
   }

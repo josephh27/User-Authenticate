@@ -15,11 +15,11 @@
                 <a href="#home" class="site-logo">logo</a>
                 <!-- site menu/nav -->
                 <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">find blogs</a></li>
+                    <li><a href="test.php">home</a></li>
+                    <li><a href="#2">about us</a></li>
+                    <li><a href="#3">find blogs</a></li>
                     <li><a href="signup.php">sign up</a></li>
-                    <li><a href="#">log in</a></li>
+                    <li><a href="#4 ">log in</a></li>
                 </ul>
                 <!-- nav-toggler for mobile version only -->
                 <button class="nav-toggler">
