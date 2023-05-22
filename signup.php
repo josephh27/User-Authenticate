@@ -7,7 +7,7 @@
     <form action="includes/signup.inc.php" method="post">
         <div class="form-inputs">
             <div class="input-box">
-                <label class="input-label">Username</label>
+                <label class="input-label">Full Name</label>
                 <input type="text" name="name" class="input-1">
             </div>
             <div class="input-box">
