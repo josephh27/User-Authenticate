@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +20,18 @@
                 <!-- site menu/nav -->
                 <ul>
                     <li><a href="test.php">home</a></li>
-                    <li><a href="#2">about us</a></li>
-                    <li><a href="#3">find blogs</a></li>
-                    <li><a href="signup.php">sign up</a></li>
-                    <li><a href="#4 ">log in</a></li>
+                    <li><a href="about.php">about us</a></li>
+                    <li><a href="blogs.php">find blogs</a></li>
+                    <?php
+                        if (isset($_SESSION['useruid'])) {
+                            echo "<li><a href='profile.php'>Profile</a></li>";
+                            echo "<li><a href='includes/logout.inc.php'>Log out</a></li>";
+                        }
+                        else {
+                            echo "<li><a href='signup.php'>Sign up</a></li>";
+                            echo "<li><a href='login.php'>Log in</a></li>";
+                        }
+                    ?>
                 </ul>
                 <!-- nav-toggler for mobile version only -->
                 <button class="nav-toggler">

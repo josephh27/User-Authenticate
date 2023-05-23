@@ -28,10 +28,36 @@
             </div>
             <button type="submit" name="submit">Sign Up</button>
         </div>
-        
     </form>
+    <?php 
+    if (isset($_GET['error'])) {
+        if ($_GET['error'] == 'emptyinput') {
+            echo "<p>Fill in all fields.</p>";
+        }
+        else if ($_GET['error'] == 'invaliduid') {
+            echo "<p>Username must only be letters and numbers.</p>";
+        }
+        else if ($_GET['error'] == 'invalidemail') {
+            echo "<p>Invalid email format.</p>";
+        }
+        else if ($_GET['error'] == 'passwordsdontmatch') {
+            echo "<p>Passwords don't match.</p>";
+        }
+        else if ($_GET['error'] == 'usernametaken') {
+            echo "<p>Username is already taken.</p>";
+        }
+        else if ($_GET['error'] == 'stmtfailed') {
+            echo "<p>Something went wrong, please try again.</p>";
+        }
+        else if ($_GET['error'] == 'none') {
+            echo "<p>You have successfully signed up!</p>";
+        }
+    }
+    ?>
 </section>
 
+
+
 <?php
-    include_once 'footer.php'
+    include_once 'footer.php'   
 ?>
